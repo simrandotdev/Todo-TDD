@@ -37,8 +37,6 @@
 		3DFCE7E4292AADCE0030BB45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DFCE7E9292AADCE0030BB45 /* Todo-TDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Todo-TDDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFCE7ED292AADCE0030BB45 /* Todo_TDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_TDDTests.swift; sourceTree = "<group>"; };
-		3DFCE7F7292AADCE0030BB45 /* Todo_TDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_TDDUITests.swift; sourceTree = "<group>"; };
-		3DFCE7F9292AADCE0030BB45 /* Todo_TDDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_TDDUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 			children = (
 				3DFCE7D5292AADCD0030BB45 /* Todo-TDD */,
 				3DFCE7EC292AADCE0030BB45 /* Todo-TDDTests */,
-				3DFCE7F6292AADCE0030BB45 /* Todo-TDDUITests */,
 				3DFCE7D4292AADCD0030BB45 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,15 +95,6 @@
 				3DFCE7ED292AADCE0030BB45 /* Todo_TDDTests.swift */,
 			);
 			path = "Todo-TDDTests";
-			sourceTree = "<group>";
-		};
-		3DFCE7F6292AADCE0030BB45 /* Todo-TDDUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3DFCE7F7292AADCE0030BB45 /* Todo_TDDUITests.swift */,
-				3DFCE7F9292AADCE0030BB45 /* Todo_TDDUITestsLaunchTests.swift */,
-			);
-			path = "Todo-TDDUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
