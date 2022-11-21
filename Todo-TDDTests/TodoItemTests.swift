@@ -10,15 +10,28 @@ import XCTest
 
 final class TodoItemTests: XCTestCase {
 
-    func test_init_takesTitle() {
+    func test_init_takesAndSetsTitle() {
         let item = TodoItem(title: "Dummy")
         XCTAssertEqual(item.title, "Dummy", "title of the item should be 'Dummy'")
     }
     
-    func test_init_takesTitleAndDescription() {
+    func test_init_takesAndSetTitleAndDescription() {
         let item = TodoItem(title: "Dummy Title", description: "Dummy Description")
         XCTAssertEqual(item.title, "Dummy Title", "title should be 'Dummy Title'")
         XCTAssertEqual(item.description, "Dummy Description", "description should be 'Dummy Description'")
+    }
+    
+    func test_init_takesAndSetTimeStamp() throws {
+        let dummyTimestamp: TimeInterval = 42.0
+        let item = TodoItem(title: "Dummy Title", timestamp: dummyTimestamp)
+        
+        XCTAssertEqual(item.title, "Dummy Title", "title should be 'Dummy Title'")
+        
+        let timestamp = try XCTUnwrap(item.timestamp)
+        XCTAssertEqual(item.timestamp!,
+                       timestamp,
+                       accuracy: 0.00_001,
+                       "timestamp should be '\(dummyTimestamp)'")
     }
 
 }
