@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D357384292BC3AE008E3AE7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D357383292BC3AE008E3AE7 /* Location.swift */; };
+		3D357386292BC5B9008E3AE7 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D357385292BC5B9008E3AE7 /* LocationTests.swift */; };
 		3DFCE7D7292AADCD0030BB45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7D6292AADCD0030BB45 /* AppDelegate.swift */; };
 		3DFCE7D9292AADCD0030BB45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7D8292AADCD0030BB45 /* SceneDelegate.swift */; };
 		3DFCE7DB292AADCD0030BB45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7DA292AADCD0030BB45 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		3D357383292BC3AE008E3AE7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3D357385292BC5B9008E3AE7 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		3DFCE7D3292AADCD0030BB45 /* Todo-TDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo-TDD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFCE7D6292AADCD0030BB45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFCE7D8292AADCD0030BB45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3DFCE7ED292AADCE0030BB45 /* TodoItemTests.swift */,
+				3D357385292BC5B9008E3AE7 /* LocationTests.swift */,
 			);
 			path = "Todo-TDDTests";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D357386292BC5B9008E3AE7 /* LocationTests.swift in Sources */,
 				3DFCE7EE292AADCE0030BB45 /* TodoItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
