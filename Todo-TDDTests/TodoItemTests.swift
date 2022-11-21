@@ -33,5 +33,11 @@ final class TodoItemTests: XCTestCase {
                        accuracy: 0.00_001,
                        "timestamp should be '\(dummyTimestamp)'")
     }
+    
+    func test_init_whenGivenLocation_setsLocation() {
+        
+        let dummyLocation = Location(name: "Dummy Location Name")
+        let item = TodoItem(title: "Dummy Title", location: dummyLocation)
+    }
 
 }

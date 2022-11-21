@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D357384292BC3AE008E3AE7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D357383292BC3AE008E3AE7 /* Location.swift */; };
 		3DFCE7D7292AADCD0030BB45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7D6292AADCD0030BB45 /* AppDelegate.swift */; };
 		3DFCE7D9292AADCD0030BB45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7D8292AADCD0030BB45 /* SceneDelegate.swift */; };
 		3DFCE7DB292AADCD0030BB45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7DA292AADCD0030BB45 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D357383292BC3AE008E3AE7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3DFCE7D3292AADCD0030BB45 /* Todo-TDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo-TDD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFCE7D6292AADCD0030BB45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFCE7D8292AADCD0030BB45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				3DFCE7E1292AADCE0030BB45 /* LaunchScreen.storyboard */,
 				3DFCE7E4292AADCE0030BB45 /* Info.plist */,
 				3DFCE806292AB97C0030BB45 /* TodoItem.swift */,
+				3D357383292BC3AE008E3AE7 /* Location.swift */,
 			);
 			path = "Todo-TDD";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			files = (
 				3DFCE7DB292AADCD0030BB45 /* ViewController.swift in Sources */,
 				3DFCE7D7292AADCD0030BB45 /* AppDelegate.swift in Sources */,
+				3D357384292BC3AE008E3AE7 /* Location.swift in Sources */,
 				3DFCE807292AB97C0030BB45 /* TodoItem.swift in Sources */,
 				3DFCE7D9292AADCD0030BB45 /* SceneDelegate.swift in Sources */,
 			);

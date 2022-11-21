@@ -12,12 +12,15 @@ struct TodoItem {
     var title: String
     var description: String?
     var timestamp: TimeInterval?
+    var location: Location?
     
     init(title: String,
          description: String? = nil,
-         timestamp: TimeInterval? = nil) {
+         timestamp: TimeInterval? = nil,
+         location: Location? = nil) {
         self.title = title
         self.description = description
         self.timestamp = timestamp
+        self.location = location
     }
 }
