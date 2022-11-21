@@ -38,6 +38,20 @@ final class TodoItemTests: XCTestCase {
         
         let dummyLocation = Location(name: "Dummy Location Name")
         let item = TodoItem(title: "Dummy Title", location: dummyLocation)
+        XCTAssertNotNil(item.location)
+    }
+    
+    func test_todoItem_isEqutable() {
+        
+        let item1 = TodoItem(title: "Title",
+                             description: "Description",
+                             timestamp: 42,
+                             location: .init(name: "Location"))
+        let item2 = TodoItem(title: "Title",
+                             description: "Description",
+                             timestamp: 42,
+                             location: .init(name: "Location"))
+        XCTAssertEqual(item1, item2)
     }
 
 }
