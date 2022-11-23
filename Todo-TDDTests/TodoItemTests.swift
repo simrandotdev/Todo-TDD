@@ -47,10 +47,7 @@ final class TodoItemTests: XCTestCase {
                              description: "Description",
                              timestamp: 42,
                              location: .init(name: "Location"))
-        let item2 = TodoItem(title: "Title",
-                             description: "Description",
-                             timestamp: 42,
-                             location: .init(name: "Location"))
+        let item2 = item1
         XCTAssertEqual(item1, item2)
     }
 
