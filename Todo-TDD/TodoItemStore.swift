@@ -16,4 +16,14 @@ class TodoItemStore {
         
         itemPublisher.append(todoItem)
     }
+    
+    func check(_ item: TodoItem) {
+        
+        var mutableItem = item
+        mutableItem.done = true
+        
+        if let index = itemPublisher.firstIndex(of: item) {
+            itemPublisher[index] = mutableItem
+        }
+    }
 }

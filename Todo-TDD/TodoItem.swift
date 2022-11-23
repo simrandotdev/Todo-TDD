@@ -9,15 +9,18 @@ import Foundation
 
 struct TodoItem: Equatable {
 
+    let id: UUID
     var title: String
     var description: String?
     var timestamp: TimeInterval?
     var location: Location?
+    var done: Bool = false
     
     init(title: String,
          description: String? = nil,
          timestamp: TimeInterval? = nil,
          location: Location? = nil) {
+        self.id = UUID()
         self.title = title
         self.description = description
         self.timestamp = timestamp
@@ -30,5 +33,6 @@ struct TodoItem: Equatable {
         && lhs.description == rhs.description
         && lhs.timestamp == rhs.timestamp
         && lhs.location == rhs.location
+        && lhs.id == rhs.id
     }
 }
