@@ -10,7 +10,9 @@ import Combine
 
 extension XCTestCase {
     func wait<T: Publisher>(for publisher: T,
-                            afterChange change: () -> Void) throws -> T.Output where T.Failure == Never {
+                            afterChange change: () -> Void,
+                            file: StaticString = #file,
+                            line: UInt = #line) throws -> T.Output where T.Failure == Never {
         let publisherExpectation = expectation(description: "Wait for publisher in \(#file)")
         var result: T.Output?
         let token = publisher
@@ -25,7 +27,9 @@ extension XCTestCase {
         token.cancel()
         let unwrappedResult = try XCTUnwrap(
             result,
-            "Publisher did not publish any value"
+            "Publisher did not publish any value",
+            file: file,
+            line: line
         )
         return unwrappedResult
     }
