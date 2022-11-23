@@ -10,22 +10,14 @@ import XCTest
 
 final class TodoItemStoreTests: XCTestCase {
     
-    func test_add_ShouldPublishChange() {
+    func test_add_ShouldPublishChange() throws {
         let sut = TodoItemStore()
-        let publisherExpectation = expectation(description: "Wait for publisher in \(#file)")
-        var receivedItems: [TodoItem] = []
-        let token = sut.$itemPublisher
-            .dropFirst()
-            .sink { items in
-                receivedItems = items
-                publisherExpectation.fulfill()
-            }
-        
         let todoItem = TodoItem(title: "Dummy Title")
-        sut.add(todoItem)
         
-        wait(for: [publisherExpectation], timeout: 1)
-        token.cancel()
+        let receivedItems = try wait(for: sut.$itemPublisher, afterChange: {
+            sut.add(todoItem)
+        })
+        
         XCTAssertEqual(receivedItems, [todoItem])
     }
 }
