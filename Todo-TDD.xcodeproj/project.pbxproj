@@ -12,6 +12,7 @@
 		3D393D95292E6E5700CEEA01 /* TodoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D393D94292E6E5700CEEA01 /* TodoItemStoreTests.swift */; };
 		3D393D97292E6EB900CEEA01 /* TodoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D393D96292E6EB900CEEA01 /* TodoItemStore.swift */; };
 		3D393D99292E74A400CEEA01 /* XCTestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D393D98292E74A400CEEA01 /* XCTestExtension.swift */; };
+		3DBAFFCE293E4AD90058B8E9 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAFFCD293E4AD90058B8E9 /* Coordinate.swift */; };
 		3DFCE7D7292AADCD0030BB45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7D6292AADCD0030BB45 /* AppDelegate.swift */; };
 		3DFCE7D9292AADCD0030BB45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7D8292AADCD0030BB45 /* SceneDelegate.swift */; };
 		3DFCE7DB292AADCD0030BB45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7DA292AADCD0030BB45 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		3D393D94292E6E5700CEEA01 /* TodoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemStoreTests.swift; sourceTree = "<group>"; };
 		3D393D96292E6EB900CEEA01 /* TodoItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemStore.swift; sourceTree = "<group>"; };
 		3D393D98292E74A400CEEA01 /* XCTestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtension.swift; sourceTree = "<group>"; };
+		3DBAFFCD293E4AD90058B8E9 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		3DFCE7D3292AADCD0030BB45 /* Todo-TDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo-TDD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFCE7D6292AADCD0030BB45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFCE7D8292AADCD0030BB45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				3DFCE806292AB97C0030BB45 /* TodoItem.swift */,
 				3D357383292BC3AE008E3AE7 /* Location.swift */,
 				3D393D96292E6EB900CEEA01 /* TodoItemStore.swift */,
+				3DBAFFCD293E4AD90058B8E9 /* Coordinate.swift */,
 			);
 			path = "Todo-TDD";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBAFFCE293E4AD90058B8E9 /* Coordinate.swift in Sources */,
 				3D393D97292E6EB900CEEA01 /* TodoItemStore.swift in Sources */,
 				3DFCE7DB292AADCD0030BB45 /* ViewController.swift in Sources */,
 				3DFCE7D7292AADCD0030BB45 /* AppDelegate.swift in Sources */,
@@ -316,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -370,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -395,7 +399,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,7 +431,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,7 +457,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WC362J72KA;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.bytesizedsoftware.Todo-TDDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -476,7 +480,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WC362J72KA;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.bytesizedsoftware.Todo-TDDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

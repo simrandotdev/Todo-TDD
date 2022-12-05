@@ -18,7 +18,7 @@ final class LocationTests: XCTestCase {
     }
     
     func test_init_setsCoordinate() throws {
-        let coordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
+        let coordinate = Coordinate(latitude: 1, longitude: 2)
         let location = Location(name: "Dummy Location Name", coordinate: coordinate)
         
         let resultsCoordinate = try XCTUnwrap(location.coordinate)

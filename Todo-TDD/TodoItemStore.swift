@@ -12,9 +12,17 @@ class TodoItemStore {
     
     @Published var itemPublisher: [TodoItem] = []
     
+    private let fileName: String
+    
+    init(fileName: String = "todoItems") {
+        self.fileName = fileName
+        loadItems()
+    }
+    
     func add(_ todoItem: TodoItem) {
         
         itemPublisher.append(todoItem)
+        saveItems()
     }
     
     func check(_ item: TodoItem) {
@@ -24,6 +32,33 @@ class TodoItemStore {
         
         if let index = itemPublisher.firstIndex(of: item) {
             itemPublisher[index] = mutableItem
+        }
+        
+        saveItems()
+    }
+    
+    // MARK: Private Methods
+    private func saveItems() {
+        if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            .first?.appending(path: fileName){
+            do {
+                let data = try JSONEncoder().encode(itemPublisher)
+                try data.write(to: url)
+            } catch {
+                print("❌ Error in \(#function) ", error)
+            }
+        }
+    }
+    
+    private func loadItems() {
+        if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            .first?.appending(path: fileName){
+            do {
+                let data = try Data(contentsOf: url)
+                itemPublisher = try JSONDecoder().decode([TodoItem].self, from: data)
+            } catch {
+                print("❌ Error in \(#function) ", error)
+            }
         }
     }
 }
