@@ -13,11 +13,11 @@ final class TodoItemStoreTests: XCTestCase {
     var sut: TodoItemStore!
     
     override func setUpWithError() throws {
-        sut = TodoItemStore()
+        sut = TodoItemStore(fileName: "dummy_store")
     }
     
     func test_add_ShouldPublishChange() throws {
-        let sut = TodoItemStore()
+        let sut = TodoItemStore(fileName: "dummy_store")
         let todoItem = TodoItem(title: "Dummy Title")
         
         let receivedItems = try wait(for: sut.$itemPublisher, afterChange: {
