@@ -39,26 +39,22 @@ class TodoItemStore {
     
     // MARK: Private Methods
     private func saveItems() {
-        if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-            .first?.appending(path: fileName){
-            do {
-                let data = try JSONEncoder().encode(itemPublisher)
-                try data.write(to: url)
-            } catch {
-                print("❌ Error in \(#function) ", error)
-            }
+        let url = FileManager.default.documentURL(name: fileName)
+        do {
+            let data = try JSONEncoder().encode(itemPublisher)
+            try data.write(to: url)
+        } catch {
+            print("❌ Error in \(#function) ", error)
         }
     }
     
     private func loadItems() {
-        if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-            .first?.appending(path: fileName){
-            do {
-                let data = try Data(contentsOf: url)
-                itemPublisher = try JSONDecoder().decode([TodoItem].self, from: data)
-            } catch {
-                print("❌ Error in \(#function) ", error)
-            }
+        let url = FileManager.default.documentURL(name: fileName)
+        do {
+            let data = try Data(contentsOf: url)
+            itemPublisher = try JSONDecoder().decode([TodoItem].self, from: data)
+        } catch {
+            print("❌ Error in \(#function) ", error)
         }
     }
 }

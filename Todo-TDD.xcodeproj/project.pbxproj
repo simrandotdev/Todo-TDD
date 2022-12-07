@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D20DE1D2940F6C800E3BEF2 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20DE1C2940F6C800E3BEF2 /* FileManager+Extension.swift */; };
 		3D357384292BC3AE008E3AE7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D357383292BC3AE008E3AE7 /* Location.swift */; };
 		3D357386292BC5B9008E3AE7 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D357385292BC5B9008E3AE7 /* LocationTests.swift */; };
 		3D393D95292E6E5700CEEA01 /* TodoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D393D94292E6E5700CEEA01 /* TodoItemStoreTests.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D20DE1C2940F6C800E3BEF2 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		3D357383292BC3AE008E3AE7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3D357385292BC5B9008E3AE7 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		3D393D94292E6E5700CEEA01 /* TodoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemStoreTests.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				3D357383292BC3AE008E3AE7 /* Location.swift */,
 				3D393D96292E6EB900CEEA01 /* TodoItemStore.swift */,
 				3DBAFFCD293E4AD90058B8E9 /* Coordinate.swift */,
+				3D20DE1C2940F6C800E3BEF2 /* FileManager+Extension.swift */,
 			);
 			path = "Todo-TDD";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DBAFFCE293E4AD90058B8E9 /* Coordinate.swift in Sources */,
+				3D20DE1D2940F6C800E3BEF2 /* FileManager+Extension.swift in Sources */,
 				3D393D97292E6EB900CEEA01 /* TodoItemStore.swift in Sources */,
 				3DFCE7DB292AADCD0030BB45 /* ViewController.swift in Sources */,
 				3DFCE7D7292AADCD0030BB45 /* AppDelegate.swift in Sources */,
