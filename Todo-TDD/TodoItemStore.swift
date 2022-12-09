@@ -8,7 +8,15 @@
 import Foundation
 import Combine
 
-class TodoItemStore {
+protocol TodoItemStoreProtocol {
+    
+    var itemPublisher: [TodoItem] { get set }
+    
+    func add(_ todoItem: TodoItem)
+    func check(_ item: TodoItem)
+}
+
+class TodoItemStore: TodoItemStoreProtocol {
     
     @Published var itemPublisher: [TodoItem] = []
     
