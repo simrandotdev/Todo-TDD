@@ -28,4 +28,8 @@ final class ToDoItemsListViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut)
     }
     
+    
+    func test_shouldHaveTableVIew() {
+        XCTAssertTrue(sut.tableView.isDescendant(of: sut.view))
+    }
 }
