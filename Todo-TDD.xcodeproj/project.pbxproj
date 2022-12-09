@@ -13,6 +13,8 @@
 		3D393D95292E6E5700CEEA01 /* TodoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D393D94292E6E5700CEEA01 /* TodoItemStoreTests.swift */; };
 		3D393D97292E6EB900CEEA01 /* TodoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D393D96292E6EB900CEEA01 /* TodoItemStore.swift */; };
 		3D393D99292E74A400CEEA01 /* XCTestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D393D98292E74A400CEEA01 /* XCTestExtension.swift */; };
+		3DB4BE2F29430ABB00C239A6 /* ToDoItemsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE2E29430ABB00C239A6 /* ToDoItemsListViewControllerTests.swift */; };
+		3DB4BE3129430B9700C239A6 /* ToDoItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4BE3029430B9700C239A6 /* ToDoItemsListViewController.swift */; };
 		3DBAFFCE293E4AD90058B8E9 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBAFFCD293E4AD90058B8E9 /* Coordinate.swift */; };
 		3DFCE7D7292AADCD0030BB45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7D6292AADCD0030BB45 /* AppDelegate.swift */; };
 		3DFCE7D9292AADCD0030BB45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCE7D8292AADCD0030BB45 /* SceneDelegate.swift */; };
@@ -41,6 +43,8 @@
 		3D393D94292E6E5700CEEA01 /* TodoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemStoreTests.swift; sourceTree = "<group>"; };
 		3D393D96292E6EB900CEEA01 /* TodoItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemStore.swift; sourceTree = "<group>"; };
 		3D393D98292E74A400CEEA01 /* XCTestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtension.swift; sourceTree = "<group>"; };
+		3DB4BE2E29430ABB00C239A6 /* ToDoItemsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewControllerTests.swift; sourceTree = "<group>"; };
+		3DB4BE3029430B9700C239A6 /* ToDoItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListViewController.swift; sourceTree = "<group>"; };
 		3DBAFFCD293E4AD90058B8E9 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		3DFCE7D3292AADCD0030BB45 /* Todo-TDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo-TDD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFCE7D6292AADCD0030BB45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				3D393D96292E6EB900CEEA01 /* TodoItemStore.swift */,
 				3DBAFFCD293E4AD90058B8E9 /* Coordinate.swift */,
 				3D20DE1C2940F6C800E3BEF2 /* FileManager+Extension.swift */,
+				3DB4BE3029430B9700C239A6 /* ToDoItemsListViewController.swift */,
 			);
 			path = "Todo-TDD";
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				3DFCE7ED292AADCE0030BB45 /* TodoItemTests.swift */,
 				3D357385292BC5B9008E3AE7 /* LocationTests.swift */,
 				3D393D94292E6E5700CEEA01 /* TodoItemStoreTests.swift */,
+				3DB4BE2E29430ABB00C239A6 /* ToDoItemsListViewControllerTests.swift */,
 			);
 			path = "Todo-TDDTests";
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 				3DFCE7DB292AADCD0030BB45 /* ViewController.swift in Sources */,
 				3DFCE7D7292AADCD0030BB45 /* AppDelegate.swift in Sources */,
 				3D357384292BC3AE008E3AE7 /* Location.swift in Sources */,
+				3DB4BE3129430B9700C239A6 /* ToDoItemsListViewController.swift in Sources */,
 				3DFCE807292AB97C0030BB45 /* TodoItem.swift in Sources */,
 				3DFCE7D9292AADCD0030BB45 /* SceneDelegate.swift in Sources */,
 			);
@@ -237,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB4BE2F29430ABB00C239A6 /* ToDoItemsListViewControllerTests.swift in Sources */,
 				3D393D99292E74A400CEEA01 /* XCTestExtension.swift in Sources */,
 				3D393D95292E6E5700CEEA01 /* TodoItemStoreTests.swift in Sources */,
 				3D357386292BC5B9008E3AE7 /* LocationTests.swift in Sources */,
