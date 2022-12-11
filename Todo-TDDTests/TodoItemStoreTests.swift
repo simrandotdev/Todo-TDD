@@ -22,7 +22,7 @@ final class TodoItemStoreTests: XCTestCase {
         let sut = TodoItemStore(fileName: STORE_NAME)
         let todoItem = TodoItem(title: "Dummy Title")
         
-        let receivedItems = try wait(for: sut.$itemPublisher, afterChange: {
+        let receivedItems = try wait(for: sut.itemPublisher, afterChange: {
             sut.add(todoItem)
         })
         
@@ -36,7 +36,7 @@ final class TodoItemStoreTests: XCTestCase {
         sut.add(todoItem)
         sut.add(todoItem2)
         
-        let receivedItems = try wait(for: sut.$itemPublisher, afterChange: {
+        let receivedItems = try wait(for: sut.itemPublisher, afterChange: {
             sut.check(todoItem)
         })
         let doneItems = receivedItems.filter { $0.done }
@@ -56,7 +56,7 @@ final class TodoItemStoreTests: XCTestCase {
         let sut2 = TodoItemStore(fileName: STORE_NAME)
         var result: [TodoItem]?
         
-        let token = sut2.$itemPublisher
+        let token = sut2.itemPublisher
             .sink { value in
                 result = value
                 publisherExpectation.fulfill()
@@ -91,7 +91,7 @@ final class TodoItemStoreTests: XCTestCase {
         sut1 = TodoItemStore(fileName: STORE_NAME)
         var result: [TodoItem]?
         
-        let token = sut1?.$itemPublisher
+        let token = sut1?.itemPublisher
             .sink(receiveValue: { items in
                 result = items
                 publisherExpectation.fulfill()

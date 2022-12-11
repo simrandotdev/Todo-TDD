@@ -10,17 +10,12 @@ import Combine
 @testable import Todo_TDD
 
 
-class TodoItemStoreProtocolMock: TodoItemStoreProtocol {
+class TodoItemStoreProtocolMock: ToDoItemStoreProtocol {
     
-    @Published var itemPublisher: [Todo_TDD.TodoItem] = []
+    var itemPublisher = CurrentValueSubject<[TodoItem], Never>([])
     
     var checkLastCallArgument: TodoItem?
-    
-    func add(_ todoItem: Todo_TDD.TodoItem) {
-        
-    }
-    
-    func check(_ item: Todo_TDD.TodoItem) {
+    func check(_ item: TodoItem) {
         checkLastCallArgument = item
     }
 }

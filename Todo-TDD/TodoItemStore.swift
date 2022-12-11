@@ -8,61 +8,65 @@
 import Foundation
 import Combine
 
-protocol TodoItemStoreProtocol {
+protocol ToDoItemStoreProtocol {
+    var itemPublisher: CurrentValueSubject<[TodoItem], Never> { get set }
     
-    var itemPublisher: [TodoItem] { get set }
-    
-    func add(_ todoItem: TodoItem)
-    func check(_ item: TodoItem)
+    func check(_: TodoItem)
 }
 
-class TodoItemStore: TodoItemStoreProtocol {
+class TodoItemStore: ToDoItemStoreProtocol {
     
-    @Published var itemPublisher: [TodoItem] = []
+    var itemPublisher = CurrentValueSubject<[TodoItem], Never>([])
+    
+    private var items: [TodoItem] = [] {
+        didSet {
+            itemPublisher.send(items)
+        }
+    }
     
     private let fileName: String
     
-    init(fileName: String = "todoItems") {
+    init(fileName: String = "todoitems") {
         self.fileName = fileName
         loadItems()
     }
     
-    func add(_ todoItem: TodoItem) {
-        
-        itemPublisher.append(todoItem)
+    func add(_ item: TodoItem) {
+        items.append(item)
         saveItems()
     }
     
     func check(_ item: TodoItem) {
-        
         var mutableItem = item
         mutableItem.done = true
-        
-        if let index = itemPublisher.firstIndex(of: item) {
-            itemPublisher[index] = mutableItem
+        if let index = items.firstIndex(of: item) {
+            items[index] = mutableItem
+            saveItems()
         }
-        
-        saveItems()
     }
     
-    // MARK: Private Methods
     private func saveItems() {
-        let url = FileManager.default.documentURL(name: fileName)
+        let url = FileManager.default
+            .documentURL(name: fileName)
+        
         do {
-            let data = try JSONEncoder().encode(itemPublisher)
+            let data = try JSONEncoder().encode(items)
             try data.write(to: url)
         } catch {
-            print("❌ Error in \(#function) ", error)
+            print("error: \(error)")
         }
     }
     
     private func loadItems() {
-        let url = FileManager.default.documentURL(name: fileName)
+        let url = FileManager.default
+            .documentURL(name: fileName)
+        
         do {
             let data = try Data(contentsOf: url)
-            itemPublisher = try JSONDecoder().decode([TodoItem].self, from: data)
+            items = try JSONDecoder()
+                .decode([TodoItem].self, from: data)
         } catch {
-            print("❌ Error in \(#function) ", error)
+            print("error: \(error)")
         }
     }
 }
